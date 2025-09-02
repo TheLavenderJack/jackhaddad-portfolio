@@ -1,0 +1,55 @@
+:root {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sticky {
+    display: flex;
+    background-color: #DEDEDE;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    color: #323232;
+    padding: 5px 0px 5px 0px;
+}
+
+.sticky svg{
+    color: #323232;
+    font-size: 1.5rem;
+    margin-left: 20px;
+    transition: 0.1s;
+}
+
+.sticky svg:hover{
+    color: #585858;
+    font-size: 1.7rem;
+    margin-left: 19px;
+}
+
+.headerBtns{
+    max-width: fit-content;
+    margin-right: 10px;
+}
+
+.headerBtns button {
+    margin: 0 3px 0 3px;
+}
+
+button{
+    border-radius: 15px;
+    border: 0px;
+    padding: 1em 1em 1em 1em;
+    margin: 0 3px 0 3px;
+    background-color: #DEDEDE;
+    transition: 0.3s;
+    color: #323232;
+    font-family: inherit;
+    font-size: 1.05rem;
+}
+
+button:hover{
+    background-color: #b8b8b8;
+    outline: none;
+}
