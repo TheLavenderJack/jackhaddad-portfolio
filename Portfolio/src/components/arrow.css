@@ -1,0 +1,38 @@
+.arrowIcon {
+  font-size: 2rem;
+  color: #323232;
+  display: block;
+  margin: -10px auto 25px auto;
+  animation: bounce 1s infinite;
+
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  12.5%{
+    transform: translateY(1px);
+  }
+  25%{
+    transform: translateY(3px);
+  }
+  37.5%{
+    transform: translateY(6.25px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  62.5%{
+    transform: translateY(6.25px);
+  }
+  75%{
+    transform: translateY(3px);
+  }
+  87.5%{
+    transform: translateY(1px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

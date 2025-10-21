@@ -13,6 +13,8 @@
     width: 100%;
     color: #323232;
     padding: 5px 0px 5px 0px;
+    position: sticky;
+    top: 0;
 }
 
 .sticky svg{
@@ -26,6 +28,7 @@
     color: #585858;
     font-size: 1.7rem;
     margin-left: 19px;
+    cursor: pointer;
 }
 
 .headerBtns{
@@ -52,4 +55,5 @@ button{
 button:hover{
     background-color: #b8b8b8;
     outline: none;
+    cursor: pointer;
 }
