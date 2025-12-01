@@ -2,6 +2,12 @@ import { useState } from "react"
 import './body.css'
 import divider from "../assets/divider.svg"
 import Arrow from "./arrow.tsx"
+import IconButton from '@mui/material/IconButton';
+import { IoLogoGithub } from "react-icons/io";
+import { FaBandcamp } from "react-icons/fa6";
+import { IoMdMail } from "react-icons/io";
+import { FaLinkedin } from "react-icons/fa";
+
 import profilePic from "../assets/JackGraduate.jpg"
 
 
@@ -24,6 +30,7 @@ function Body(){
             
             <img src={divider} style={{ width: "100%"}}/>
             <div className="purple">
+            <div id="about" style={{ margin: "-200px 0 200px 0"}}></div>
                 <div className="aboutDiv">
                     <div className="aboutDivText">
                         <h2>About Me</h2>
@@ -31,34 +38,39 @@ function Body(){
                     </div>
                     <img src={profilePic} className="graduateImg"/>
                 </div>
+                <div id="projects"></div>
                 <div className="projectsDiv">
                     <h2>Projects</h2>
                     <div className="projectSectionsDiv">
                         <div className="projectSection">
                             <h3>Check out my code repos:</h3>
                             <ul>
-                                <li><a href="https://github.com/TheLavenderJack/sprun-share-public">SprunShare</a></li>
-                                <li><a href="https://github.com/TheLavenderJack/Shwoomp">Game Jam Entries</a></li>
+                                <li><a href="https://github.com/TheLavenderJack/sprun-share-public" target="_blank">SprunShare</a></li>
+                                <li><a href="https://github.com/TheLavenderJack/Shwoomp" target="_blank">Game Jam Entries</a></li>
                                 <li>And More!</li>
-                                {/*github icon here w/ this link: https://github.com/TheLavenderJack*/}
-
                             </ul>
+                            <IconButton aria-label="github" onClick={() => {window.open("https://github.com/TheLavenderJack", "_blank")}}><IoLogoGithub size={60}/></IconButton>
+                            
+                            
                         </div>
-                        <div className="projectSection">/
+                        <div className="projectSection">
                             <h3>Listen to my original music:</h3>
                             <ul>
-                                <li><a href="https://lavenderjack.bandcamp.com/album/singeli-sounds-b">Singeli</a></li>
-                                <li><a href="https://lavenderjack.bandcamp.com/album/gym-leader-themes">Pokémon Gym Themes</a></li>
+                                <li><a href="https://lavenderjack.bandcamp.com/album/singeli-sounds-b" target="_blank">Singeli</a></li>
+                                <li><a href="https://lavenderjack.bandcamp.com/album/gym-leader-themes" target="_blank">Pokémon Gym Themes</a></li>
                                 <li>And More!</li>
-                                {/*bandcamp logo w/ this link: https://lavenderjack.bandcamp.com*/}
                             </ul>
+                            <IconButton aria-label="bandcamp" onClick={() => {window.open("https://lavenderjack.bandcamp.com", "_blank")}}><FaBandcamp size={60}/></IconButton>
                         </div>
 
                     </div>
-
-
                 </div>
-            
+                // Contact Section
+                <div className="contactDiv">
+                    <h2>Contact</h2>
+                    <IconButton aria-label="LinkedIn" onClick={() => window.open("https://www.linkedin.com/in/jackhaddad143/", "_blank")}><FaLinkedin size={60}/></IconButton>
+                    <IconButton aria-label="Email" onClick={() => location.href = "mailto:jackhaddad143@gmail.com"}><IoMdMail size={60}/></IconButton>
+                </div>
             
             </div>
         </>
