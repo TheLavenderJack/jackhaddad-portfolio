@@ -1,4 +1,3 @@
-import { useState } from "react"
 import './body.css'
 import divider from "../assets/divider.svg"
 import Arrow from "./arrow.tsx"
