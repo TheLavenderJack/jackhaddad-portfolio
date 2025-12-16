@@ -7,12 +7,14 @@ import './header.css'
 function Header(){
     return (
         <>
-            <div className="sticky">
-                <IconButton><FaHouse /></IconButton>
+            <div id="header" className="sticky">
+                <div className="headerHomeBtn">
+                    <IconButton><FaHouse onClick={() => {scrollTo(0, 0)}}/></IconButton>
+                </div>
                 <div className="headerBtns">
                     <button onClick={() => {location.href = "#about"}}>About</button>
                     <button onClick={() => {location.href = "#projects"}}>Projects</button>
-                    <button>Contact</button>
+                    <button onClick={() => {location.href = "#contact"}}>Contact</button>
                 </div>
             </div>
         </>

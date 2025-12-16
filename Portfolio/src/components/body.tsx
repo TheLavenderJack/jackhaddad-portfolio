@@ -9,9 +9,33 @@ import { IoMdMail } from "react-icons/io";
 import { FaLinkedin } from "react-icons/fa";
 
 import profilePic from "../assets/JackGraduate.jpg"
+import React from "react";
+import Typed from 'typed.js';
+
 
 
 function Body(){
+
+    const el = React.useRef(null);
+
+    React.useEffect(() => {
+        const typed = new Typed(el.current, {
+            strings: ['Software Developer', 'Composer', 'Game Designer', 'Problem Solver'],
+            typeSpeed: 50,
+            backDelay: 1200,
+            backSpeed: 50,
+            loop: true,
+            
+        });
+
+        return () => {
+        // Destroy Typed instance during cleanup to stop animation
+            typed.destroy();
+        };
+    }, []);
+
+
+
     return (
         <>
             <div className="hi">
@@ -19,7 +43,7 @@ function Body(){
             </div>
             <div className="startText">
                 <h1 style={{ margin: "0"}}>Jack Haddad</h1>
-                <h2 className="begin">Software Dev | Composer | Game Designer</h2>
+                <h2 className="begin, typing">I am a... <span ref={el}/></h2>
                 <div style={{width:"405px", margin:"auto"}}>
                     <p>At the intersection of creativity and technology, I stand proud and pursue a better, kinder future.</p>
                 </div>
@@ -65,13 +89,19 @@ function Body(){
 
                     </div>
                 </div>
-                // Contact Section
-                <div className="contactDiv">
+
+                <div id="contact" className="contactDiv">
+
                     <h2>Contact</h2>
-                    <IconButton aria-label="LinkedIn" onClick={() => window.open("https://www.linkedin.com/in/jackhaddad143/", "_blank")}><FaLinkedin size={60}/></IconButton>
-                    <IconButton aria-label="Email" onClick={() => location.href = "mailto:jackhaddad143@gmail.com"}><IoMdMail size={60}/></IconButton>
+                    <div>
+                        <IconButton aria-label="LinkedIn" onClick={() => window.open("https://www.linkedin.com/in/jackhaddad143/", "_blank")}><FaLinkedin size={60}/></IconButton>
+                    </div>
+                    <div>
+                        <IconButton aria-label="Email" onClick={() => location.href = "mailto:jackhaddad143@gmail.com"}><IoMdMail size={60}/></IconButton>
+                    </div>
                 </div>
-            
+
+                <footer>© 2025 Jack Haddad. All Rights Reserved.</footer>
             </div>
         </>
     )
